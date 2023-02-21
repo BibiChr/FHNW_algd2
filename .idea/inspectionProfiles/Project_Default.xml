@@ -1,0 +1,7 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <description>Inspection Profile that makes JS code appears as it had types</description>
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="JSCommentMatchesSignature" enabled="true" level="ERROR" enabled_by_default="true" />
+  </profile>
+</component>
