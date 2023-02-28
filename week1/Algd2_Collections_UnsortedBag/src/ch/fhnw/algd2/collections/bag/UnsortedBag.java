@@ -27,8 +27,8 @@ public class UnsortedBag<E extends Comparable<E>> extends
             throw new NullPointerException();
         }
         if (lastIndex + 1 > capacity) {
-            resizeArray(true);
-            //throw new IllegalStateException();
+            //resizeArray(true);
+            throw new IllegalStateException();
         }
         data[lastIndex++] = e;
         return true;
