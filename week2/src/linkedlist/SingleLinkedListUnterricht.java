@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class SingleLinkedList {
+public class SingleLinkedListUnterricht {
 
     private Element head;
 
