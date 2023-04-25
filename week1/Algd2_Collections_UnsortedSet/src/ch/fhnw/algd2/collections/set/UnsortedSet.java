@@ -3,10 +3,10 @@ package ch.fhnw.algd2.collections.set;
 import java.util.Arrays;
 import java.util.Set;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
 public class UnsortedSet<E extends Comparable<E>> extends
-		MyAbstractCollection<E> implements Set<E> {
+        MyAbstractCollection2<E> implements Set<E> {
 
 	public static final int DEFAULT_CAPACITY = 100;
 	private int capacity;
@@ -23,16 +23,16 @@ public class UnsortedSet<E extends Comparable<E>> extends
 	}
 
 	@Override
-	public boolean add(E e) {
+	public boolean add(E e) {	return true;
 	}
 
 	@Override
-	public boolean remove(Object o) {
+	public boolean remove(Object o) {	return true;
 	}
 
 
 	@Override
-	public boolean contains(Object o) {
+	public boolean contains(Object o) {	return true;
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class UnsortedSet<E extends Comparable<E>> extends
 
 	@Override
 	public int size() {
-		
+		return 0;
 	}
 
 	public static void main(String[] args) {

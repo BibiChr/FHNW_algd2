@@ -2,10 +2,10 @@ package ch.fhnw.algd2.collections.bag;
 
 import java.util.Arrays;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
 public class UnsortedBag<E extends Comparable<E>> extends
-        MyAbstractCollection<E> {
+        MyAbstractCollection2<E> {
     public static final int DEFAULT_CAPACITY = 100;
     private int capacity;
     private Object[] data;

@@ -10,10 +10,10 @@ package loesungen;
 import java.util.Arrays;
 import java.util.Set;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
 public class UnsortedSet<E extends Comparable<E>> extends
-		MyAbstractCollection<E> implements Set<E> {
+        MyAbstractCollection2<E> implements Set<E> {
 
 	public static final int DEFAULT_CAPACITY = 100;
 	private int size;

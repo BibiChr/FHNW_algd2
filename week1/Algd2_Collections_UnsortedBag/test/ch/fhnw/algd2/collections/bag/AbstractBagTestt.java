@@ -1,9 +1,9 @@
 package ch.fhnw.algd2.collections.bag;
 
 import static org.junit.Assert.assertTrue;
-import ch.fhnw.algd2.collections.AbstractCollectionTest;
+import ch.fhnw.algd2.collections.AbstractCollectionTestt;
 
-public abstract class AbstractBagTest extends AbstractCollectionTest {
+public abstract class AbstractBagTestt extends AbstractCollectionTestt {
 
 	@Override
 	protected void addNumbersToBag(Integer[] numbers) {

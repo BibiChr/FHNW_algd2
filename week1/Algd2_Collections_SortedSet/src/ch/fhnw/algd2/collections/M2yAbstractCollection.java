@@ -1,9 +1,9 @@
-package ch.fhnw.algd2.collections; 
+package Algd2_Collections_SortedSet.src.ch.fhnw.algd2.collections;
 
 import java.util.AbstractCollection;
 import java.util.Iterator;
 
-public abstract class MyAbstractCollection<E extends Comparable<E>> extends
+public abstract class M2yAbstractCollection<E extends Comparable<E>> extends
 		AbstractCollection<E> {
 
 	@Override

@@ -1,26 +1,27 @@
 //******************************************************************************
-//  ALGD-2  :  Excercise 1a : SortedBag                                        *
+//  ALGD-2  :  Excercise 1a : UnsortedBag                                      *
 // --------------------------------------------------------------------------- *
-//  version 1  :                                                          vtg  *
+//  version 2                                                             vtg  * 
 //******************************************************************************
 
 package loesungen;
 
 import java.util.Arrays;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
-public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> {
+public class UnsortedBag<E extends Comparable<E>> extends
+        MyAbstractCollection2<E> {
 
 	public static final int DEFAULT_CAPACITY = 100;
 	private int size;
 	private Object[] data;
 
-	public SortedBag() {
+	public UnsortedBag() {
 		this(DEFAULT_CAPACITY);
 	}
 
-	public SortedBag(int capacity) {
+	public UnsortedBag(int capacity) {
 		this.size = 0;
 		data = new Object[capacity];
 	}
@@ -29,20 +30,14 @@ public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> 
 	public boolean add(E e) {
 	  if (size == data.length) throw new IllegalStateException();
     if (e==null) throw new NullPointerException();
-    int pos = Arrays.binarySearch(data,0,size,e);
-    if (pos<0)
-      pos = -(pos + 1);
-    for (int i=size; i>pos; --i){
-      data[i] = data[i-1];
-    }
-    data[pos] = e;
-    ++size;
+    data[size++] = e;
     return true;
 	}
 
 	@Override
 	public boolean remove(Object o) {
-	  int pos = Arrays.binarySearch(data,0,size,o);
+	  int pos = find(o);
+	  
     if (pos < 0){
       return false;
     }else{
@@ -56,13 +51,8 @@ public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> 
 
 	@Override
 	public boolean contains(Object o) {
-	  E dummy = (E)o; // check class cast
-    if (size>0){
-      return Arrays.binarySearch(data,0,size,o) >= 0;
-    }
-    return false;
+	  return find(o) >= 0;
 	}
-
 
 	@Override
 	public Object[] toArray() {
@@ -71,11 +61,25 @@ public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> 
 
 	@Override
 	public int size() {
-	  return size;
+		return size;
 	}
+	
+	private int find(Object o) {
+    try{
+      for (int i=0; i<size; ++i){
+        if (((E)data[i]).compareTo((E)o) == 0){
+          return i;
+        }
+      }
+    }
+    catch (ClassCastException e){
+      return -1;
+    }
+    return -1;
+  }
 
 	public static void main(String[] args) {
-		SortedBag<Integer> bag = new SortedBag<Integer>();
+		UnsortedBag<Integer> bag = new UnsortedBag<Integer>();
 		bag.add(2);
 		bag.add(1);
 		System.out.println(Arrays.toString(bag.toArray()));

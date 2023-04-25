@@ -4,13 +4,13 @@ import static org.junit.Assert.assertFalse;
 
 import org.junit.Test;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
 public class UnsortedBagTest<E extends Comparable<E>> extends
 		AbstractBagTest {
 
 	@Override
-	protected MyAbstractCollection<Integer> createIntegerCollection(int size) {
+	protected MyAbstractCollection2<Integer> createIntegerCollection(int size) {
 		return new UnsortedBag<Integer>(size);
 	}
 

@@ -15,10 +15,10 @@ import org.junit.Test;
  * 
  * @param <E>
  */
-public abstract class AbstractCollectionTest {
+public abstract class AbstractCollectionTesttt {
 	private static final int DEFAULT_SIZE = 10;
 
-	protected MyAbstractCollection<Integer> bag;
+	protected MyAbstractCollection2<Integer> bag;
 
 	@Before
 	public void init() {
@@ -133,7 +133,7 @@ public abstract class AbstractCollectionTest {
 		assertEquals(numbers.length - 1, bag.size());
 	}
 
-	protected abstract MyAbstractCollection<Integer> createIntegerCollection(
+	protected abstract MyAbstractCollection2<Integer> createIntegerCollection(
 			int size);
 
 	protected abstract Integer[] getExpectedOrderFor(Integer[] values);

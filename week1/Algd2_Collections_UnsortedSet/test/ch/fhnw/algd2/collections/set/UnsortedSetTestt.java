@@ -9,12 +9,12 @@ import java.util.List;
 
 import org.junit.Test;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
-public class UnsortedSetTest extends AbstractSetTest {
+public class UnsortedSetTestt extends AbstractSetTestt {
 
 	@Override
-	protected MyAbstractCollection<Integer> createIntegerCollection(int size) {
+	protected MyAbstractCollection2<Integer> createIntegerCollection(int size) {
 		return new UnsortedSet<Integer>(size);
 	}
 

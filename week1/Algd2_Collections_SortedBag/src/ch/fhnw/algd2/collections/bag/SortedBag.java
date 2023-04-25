@@ -2,9 +2,9 @@ package ch.fhnw.algd2.collections.bag;
 
 import java.util.Arrays;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
-public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> {
+public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection2<E> {
 
 	public static final int DEFAULT_CAPACITY = 100;
 	private int capacity;
@@ -21,14 +21,16 @@ public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> 
 
 	@Override
 	public boolean add(E e) {
+		return  true;
 	}
 
 	@Override
 	public boolean remove(Object o) {
+		return true;
 	}
 
 	@Override
-	public boolean contains(Object o) {
+	public boolean contains(Object o) {	return true;
 	}
 
 
@@ -38,7 +40,7 @@ public class SortedBag<E extends Comparable<E>> extends MyAbstractCollection<E> 
 	}
 
 	@Override
-	public int size() {
+	public int size() { return 0;
 	}
 
 	public static void main(String[] args) {

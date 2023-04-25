@@ -9,9 +9,9 @@ package loesungen;
 import java.util.Arrays;
 import java.util.Set;
 
-import ch.fhnw.algd2.collections.MyAbstractCollection;
+import ch.fhnw.algd2.collections.MyAbstractCollection2;
 
-public class SortedSet<E extends Comparable<E>> extends MyAbstractCollection<E>
+public class SortedSet<E extends Comparable<E>> extends MyAbstractCollection2<E>
 		implements Set<E> {
 
 	public static final int DEFAULT_CAPACITY = 10;

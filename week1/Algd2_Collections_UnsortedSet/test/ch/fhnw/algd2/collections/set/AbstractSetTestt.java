@@ -6,9 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.HashSet;
 import java.util.Set;
 
-import ch.fhnw.algd2.collections.AbstractCollectionTest;
+import ch.fhnw.algd2.collections.AbstractCollectionTestt;
 
-public abstract class AbstractSetTest extends AbstractCollectionTest {
+public abstract class AbstractSetTestt extends AbstractCollectionTestt {
 
 	@Override
 	protected void addNumbersToBag(Integer[] numbers) {

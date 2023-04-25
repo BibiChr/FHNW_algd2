@@ -3,7 +3,7 @@ package ch.fhnw.algd2.collections;
 import java.util.AbstractCollection;
 import java.util.Iterator;
 
-public abstract class MyAbstractCollection<E extends Comparable<E>> extends
+public abstract class MyAbstractCollection2<E extends Comparable<E>> extends
 		AbstractCollection<E> {
 
 	@Override
